@@ -1,0 +1,44 @@
+
+<div class="container p-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card shadow p-3 mb-5 bg-body rounded">
+                <div class="card-header text-center fs-4">Update Student Details</div>
+                  
+                <div class="card-body">
+                    <form (ngSubmit)="onSubmit()">
+    
+                        <div class="form-group">
+                            <label class="form-label">Enter FirstName</label>
+                            <input type="text" class="form-control" id="name" 
+                                    [(ngModel)]="student.name" name="name"> 
+                        </div>
+                    
+                        <div class="form-group">
+                            <label class="form-label">Enter Contact Details</label>
+                            <input type="text" class="form-control" id="contactDetails" ls
+                                    [(ngModel)]="student.contactDetails" name="contactDetails"> 
+                        </div>
+                    
+                        <div class="form-group mb-3">
+                            <label class="form-label">Enter Address</label>
+                            <input type="text" class="form-control" id="address" 
+                                    [(ngModel)]="student.address" name="address"> 
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label class="form-label">Enter Pincode</label>
+                            <input type="text" class="form-control" id="pincode" 
+                                    [(ngModel)]="student.pincode" name="pincode"> 
+                        </div>
+                          
+                          <button type="submit" class="btn btn-success">Update</button>
+                      </form>
+                </div>
+                
+        </div>
+    </div>
+</div>
+</div>
+
+

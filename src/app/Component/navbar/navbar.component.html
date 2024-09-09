@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a *ngIf="!loggedIn" class="navbar-brand" href="">Student Management App</a>
+      <a *ngIf="loggedIn" class="navbar-brand" href="/home">Student Management App</a>
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li *ngIf="loggedIn" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/addStudent">Add</a>
+        </li>
+      </ul>
+
+     
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li *ngIf="!loggedIn" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/login">Login</a>
+        </li>
+      </ul>
+
+      <div *ngIf="loggedIn" class="navbar-nav mb-2 mb-lg-0">
+        <span class="navbar-text me-2">
+          Welcome, {{ username }}!
+        </span>
+        <button  class="btn btn-outline-dark" type="button" (click)="logout()">Logout</button>
+      </div>
+     
+        
+    </div>
+  </div>
+</nav>
